@@ -7,6 +7,8 @@ c.aliases = {
     "h": "help",
     "ba": "bookmark-add",
     "bl": "bookmark-list",
+    "w":"session-save",
+    "l":"session-load default",
     "q": "quit",
 }
 
@@ -32,8 +34,8 @@ c.url.searchengines = {
 }
 c.url.open_base_url = True
 c.url.default_page = 'https://www.google.com/'
-c.url.start_pages = [
-    'file:///E:/Personal_Project/home_page/homepage/index.html']
+# c.url.start_pages = [
+#     'file:///E:/Personal_Project/home_page/homepage/index.html']
 
 # Font
 c.fonts.default_size = "15pt"
@@ -46,7 +48,7 @@ c.fonts.default_family = 'Fira Code Bold'
 c.colors.webpage.darkmode.enabled = True
 
 # content
-# c.content.javascript.enabled = True
+c.content.javascript.enabled = True
 c.content.local_content_can_access_remote_urls = True
 
 # Set Neovim as the editor

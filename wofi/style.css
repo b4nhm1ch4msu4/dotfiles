@@ -1,0 +1,60 @@
+/* --background:   #121212; */
+/* --foreground:   #BFBFBF; */
+/* --visual:       #404040; */
+/* --cursor:       #383838; */
+/* --black:        #232323; */
+/* --red:          #FF5454; */
+/* --green:        #00CC7A; */
+/* --yellow:       #FFD700; */
+/* --orange:       #FF7431; */
+/* --blue:         #00BFFF; */
+/* --cyan:         #00FFFF; */
+/* --white:        #BFBFBF; */
+/* Base settings */
+* {
+  /* border-radius: 3px; */
+  border:none;
+}
+window {
+  font-size:24px;
+  font-family: "Fira Code Bold";
+  /* background-color: rgba(50,50,50,0.9); */
+  background-color: #232323;
+  color: white;
+  border-bottom: 3px solid white;
+}
+
+#outer-box{
+
+  /* border:20px solid black; */
+}
+
+#inner-box {
+
+  /* border:10px solid red; */
+}
+
+#entry {
+  padding: 0.25em;
+}
+
+#entry:selected {
+  background-color: #bbccdd;
+  background: linear-gradient(90deg,#bbffdd,#dd77ff);
+}
+
+#text:selected {
+  color: #333333;
+}
+
+#input {
+  /* border:10px solid red; */
+  background-color: rgba(50,50,50,0.5);
+  color: white;
+  padding: 0.25em;
+}
+
+image {
+  margin-left: .25em;
+  margin-right: .25em;
+}
