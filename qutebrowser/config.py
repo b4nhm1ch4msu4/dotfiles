@@ -7,8 +7,6 @@ c.aliases = {
     "h": "help",
     "ba": "bookmark-add",
     "bl": "bookmark-list",
-    "w":"session-save",
-    "l":"session-load default",
     "q": "quit",
 }
 
@@ -24,6 +22,11 @@ config.bind('<Ctrl-7>', 'tab-focus 7')
 config.bind('<Ctrl-8>', 'tab-focus 8')
 config.bind('<Ctrl-9>', 'tab-focus 9')
 
+# content
+c.content.default_encoding = 'utf-8'
+c.content.javascript.enabled = True
+c.content.local_content_can_access_remote_urls = True
+
 # URL
 c.url.searchengines = {
     'DEFAULT': 'https://www.google.com/search?q={}',
@@ -34,11 +37,13 @@ c.url.searchengines = {
 }
 c.url.open_base_url = True
 c.url.default_page = 'https://www.google.com/'
-# c.url.start_pages = [
-#     'file:///E:/Personal_Project/home_page/homepage/index.html']
+c.url.start_pages = [
+    # 'file:///E:/Personal_Project/home_page/homepage/index.html']
+    'file:///E:/Personal_Project/home_page/homepage/index.html']
+
 
 # Font
-c.fonts.default_size = "15pt"
+c.fonts.default_size = "14pt"
 c.fonts.web.family.sans_serif = 'Public Sans'
 c.fonts.web.family.serif = 'Public Sans'
 c.fonts.web.family.standard = 'Public Sans'
@@ -46,10 +51,9 @@ c.fonts.web.family.fixed = 'Fira Code Bold'
 c.fonts.default_family = 'Fira Code Bold'
 
 c.colors.webpage.darkmode.enabled = True
-
-# content
-c.content.javascript.enabled = True
-c.content.local_content_can_access_remote_urls = True
+c.zoom.default='125%'
+c.input.insert_mode.auto_load = True
+c.window.hide_decoration = True
 
 # Set Neovim as the editor
 c.editor.command = ['nvim', '-f', '{file}', '-c', 'normal {line}G{column0}l']
