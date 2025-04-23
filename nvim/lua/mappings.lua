@@ -42,6 +42,8 @@ map("v", "K", ":m '<-2<CR>gv=gv", { desc = "Move Line Down" })
 map({ "n", "v" }, "<C-a>", "ggVG", { desc = "Select All" })
 
 -- Disable diagnostic
+map("n", "]]", "<cmd>:lua vim.diagnostic.goto_next()<CR>", { desc = "Next Diagnostic" })
+map("n", "[[", "<cmd>:lua vim.diagnostic.goto_prev()<CR>", { desc = "Previous Diagnostic" })
 map(
 	"n",
 	"<leader>ud",
