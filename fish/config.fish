@@ -19,13 +19,14 @@ abbr mkdir 'mkdir -p'
 
 ## bat-extras
 abbr man 'batman'
-abbr rg 'batgrep'
+abbr grep 'batgrep'
 
 ## git
-abbr gst 'git status'
+abbr gs 'git status'
 abbr ga 'git add'
 abbr gpl 'git pull'
 abbr gps 'git push'
+abbr lg 'lazygit'
 
 function y
   set tmp (mktemp -t "yazi-cwd.XXXXXX")
