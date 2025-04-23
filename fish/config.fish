@@ -1,16 +1,16 @@
 set -g fish_greeting
+set -U EDITOR nvim
 fish_vi_key_bindings
 
 # alias
 alias c='clear'
-alias nv='nvim'
+alias n='nvim'
 alias l='eza -lh --icons=auto'
 alias ls='eza -l --icons=auto'
 alias ll='eza -lha --icons=auto --sort=name --group-directories-first'
 alias ld='eza -lhD --icons=auto'
 alias lt='eza --icons=auto --tree'
 alias ff='fastfetch'
-alias cat='bat'
 
 # abbr
 abbr cd 'z'
@@ -18,6 +18,7 @@ abbr sp 'sudo pacman'
 abbr mkdir 'mkdir -p'
 
 ## bat-extras
+abbr cat='bat'
 abbr man 'batman'
 abbr grep 'batgrep'
 
