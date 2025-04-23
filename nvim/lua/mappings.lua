@@ -11,6 +11,12 @@ map("n", "<C-l>", "<C-w>l", { desc = "switch window right" })
 map("n", "<C-j>", "<C-w>j", { desc = "switch window down" })
 map("n", "<C-k>", "<C-w>k", { desc = "switch window up" })
 
+-- -- Swich buffer
+-- map("n", "<leader>bn", "<cmd>bn<CR>", { desc = "next buffer" })
+-- map("n", "<leader>bp", "<cmd>bp<CR>", { desc = "previous buffer" })
+-- -- Close buffer
+-- map("n", "<leader>bd", "<cmd>bd<CR>", { desc = "close buffer" })
+
 -- rebind j/k with gj/gk
 map("n", "j", function()
 	return vim.v.count == 0 and "gj" or "j"
@@ -63,3 +69,22 @@ end, { desc = "Oil toggle window" })
 map("n", "<leader>fm", function()
 	require("conform").format({ lsp_fallback = true })
 end, { desc = "general format file" })
+
+-- Luasnip
+local ls = require("luasnip")
+
+map({ "i" }, "<C-K>", function()
+	ls.expand()
+end, { silent = true })
+map({ "i", "s" }, "<C-L>", function()
+	ls.jump(1)
+end, { silent = true })
+map({ "i", "s" }, "<C-J>", function()
+	ls.jump(-1)
+end, { silent = true })
+
+map({ "i", "s" }, "<C-E>", function()
+	if ls.choice_active() then
+		ls.change_choice(1)
+	end
+end, { silent = true })

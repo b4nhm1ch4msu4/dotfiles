@@ -33,3 +33,4 @@ require("lazy").setup({
 
 require("options")
 require("mappings")
+require("autocmd")
