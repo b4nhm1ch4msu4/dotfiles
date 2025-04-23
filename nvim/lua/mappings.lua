@@ -77,13 +77,13 @@ local ls = require("luasnip")
 
 map({ "i" }, "<C-K>", function()
 	ls.expand()
-end, { silent = true })
+end, { silent = true, desc = "Luasnip expand" })
 map({ "i", "s" }, "<C-L>", function()
 	ls.jump(1)
-end, { silent = true })
-map({ "i", "s" }, "<C-J>", function()
+end, { silent = true, desc = "Luasnip jump forward" })
+map({ "i", "s" }, "<C-H>", function()
 	ls.jump(-1)
-end, { silent = true })
+end, { silent = true, desc = "Luasnip jump backward" })
 
 map({ "i", "s" }, "<C-E>", function()
 	if ls.choice_active() then
