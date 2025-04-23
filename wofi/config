@@ -1,4 +1,5 @@
 mode=drun
+prompt= Hello World
 allow_images=true
 image_size=35
 width=900

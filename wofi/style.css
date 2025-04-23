@@ -12,46 +12,74 @@
 /* --white:        #BFBFBF; */
 /* Base settings */
 * {
-  /* border-radius: 3px; */
+  color: #00CC7A;
   border:none;
 }
 window {
   font-size:24px;
   font-family: "Fira Code Bold";
-  /* background-color: rgba(50,50,50,0.9); */
-  background-color: #232323;
-  color: white;
-  border-bottom: 3px solid white;
+  background-color: #121212;
+  box-shadow:none;
+  /* color: #00CC7A; */
+  /* border: 5px solid #00CC7A; */
+  /* border-bottom:none; */
 }
 
 #outer-box{
-
   /* border:20px solid black; */
+  /* border-top: 4px solid #00CC7A; */
+  border-bottom: 4px solid #00CC7A;
+  border-left: 2px solid #00CC7A;
+  border-right: 4px solid #00CC7A;
+  border-radius:12px;
+
 }
 
 #inner-box {
-
   /* border:10px solid red; */
+
+  border: 2px solid #00CC7A;
+  border-top: 0px solid #00CC7A;
+  border-bottom: 0px solid #00CC7A;
 }
 
 #entry {
   padding: 0.25em;
+  padding-bottom: 10px;
+  border-left: 2px solid #00CC7A;
 }
 
 #entry:selected {
-  background-color: #bbccdd;
-  background: linear-gradient(90deg,#bbffdd,#dd77ff);
+  background-color: #121212;
+  /* background: linear-gradient(90deg,#bbffdd,#dd77ff); */
+  background: linear-gradient(90deg,#232323,#00CC7A);
+  /* border-left: 1px solid #00CC7A; */
+  border-top: 2px solid #00CC7A;
+  border-bottom: 2px solid #00CC7A;
+  border-left: 2px solid #00CC7A;
+  border-radius: 0px;
 }
 
 #text:selected {
-  color: #333333;
+  /* color: #00CC7A; */
 }
 
 #input {
-  /* border:10px solid red; */
-  background-color: rgba(50,50,50,0.5);
-  color: white;
+  background-color: #121212;
+  /* color: #00CC7A; */
   padding: 0.25em;
+  box-shadow:none;
+  border: 0px transparent #00CC7A;
+  border-top:4px solid #00CC7A;
+  border-left: 4px solid #00CC7A;
+  border-bottom:2px solid #00CC7A;
+  border-radius:8px 8px 0px 0px;
+}
+#input:focus{
+}
+
+#input image{
+  padding-left: 2px;
 }
 
 image {

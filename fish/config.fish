@@ -42,6 +42,7 @@ end
 #  z "$(dirname "$(fd $argv -t f | fzf --preview 'bat --color=always {}')")"
 #end
 
+
 # source
 zoxide init fish | source
 fzf --fish | source
