@@ -40,7 +40,10 @@ c.url.default_page = 'https://www.google.com/'
 c.url.start_pages = [
     # 'file:///E:/Personal_Project/home_page/homepage/index.html']
     'file:///E:/Personal_Project/home_page/homepage/index.html']
-
+# c.content.blocking.whitelist = [
+#         "https://estudyme.com/*"
+#         ]
+# c.content.blocking.enabled = False
 
 # Font
 c.fonts.default_size = "14pt"
