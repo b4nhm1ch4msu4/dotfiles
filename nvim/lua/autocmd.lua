@@ -9,8 +9,9 @@ vim.api.nvim_create_autocmd("BufReadPost", {
         local bufname = vim.api.nvim_buf_get_name(args.buf)
         local filetype = vim.bo[args.buf].filetype
         -- Skip if: unnamed, directory, or special buffer (e.g., NvimTree)
-        if bufname == "" or vim.fn.isdirectory(bufname) == 1 or filetype ==
-            "" then return end
+        if bufname == "" or vim.fn.isdirectory(bufname) == 1 or filetype == "" then
+            return
+        end
 
         -- Skip empty files
         local lines = vim.api.nvim_buf_get_lines(args.buf, 0, -1, false)
