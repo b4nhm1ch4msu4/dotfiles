@@ -10,14 +10,14 @@ local fmta = require("luasnip.extras.fmt").fmta
 local rep = require("luasnip.extras").rep
 
 return {
-  s({trig = "f"},fmta([[
+    s({trig = "f"}, fmta([[
   <return_type> <name>(<args>){
     <body>
   }
-  ]],{
-    return_type = i(1,"void"),
-    name = i(2,"function_name"),
-    args = i(3,""),
-    body = i(0),
-  }))
+  ]], {
+        return_type = i(1, "void"),
+        name = i(2, "function_name"),
+        args = i(3, ""),
+        body = i(0)
+    }))
 }

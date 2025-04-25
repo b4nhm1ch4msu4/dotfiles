@@ -1,18 +1,10 @@
 return {
     "Exafunction/codeium.nvim",
-    dependencies = {
-        "nvim-lua/plenary.nvim",
-        "hrsh7th/nvim-cmp",
-    },
+    dependencies = {"nvim-lua/plenary.nvim", "hrsh7th/nvim-cmp"},
     event = "InsertEnter",
     config = function()
         require("codeium").setup({
-          virtual_text = {
-            enabled = true,
-            key_bindings = {
-              accept = "<A-y>",
-            }
-          }
+            virtual_text = {enabled = true, key_bindings = {accept = "<A-y>"}}
         })
     end
 }
