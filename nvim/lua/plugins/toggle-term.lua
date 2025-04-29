@@ -6,7 +6,7 @@ return {
         direction = 'float',
         float_opts = {
             border = 'curved', -- 'single' | 'double' | 'shadow' | 'curved' | ... other options supported by win open
-            winblend = 3,
+            winblend = 0,
             title_pos = 'left' -- 'left' | 'center' | 'right', position of the title of the floating window
         }
     }

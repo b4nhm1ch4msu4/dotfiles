@@ -5,7 +5,10 @@ return {
     ---@module 'blink.cmp'
     ---@type blink.cmp.Config
     opts = {
-        keymap = {preset = "default"},
+        keymap = {
+            preset = "default",
+            ['<Tab>'] = {'select_and_accept', 'fallback'},
+        },
         appearance = {nerd_font_variant = "mono"},
         completion = {
             menu = {draw = {gap = 2}, border = "rounded"},
