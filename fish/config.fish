@@ -11,7 +11,7 @@ alias ll='eza -lha --icons=auto --sort=name --group-directories-first'
 alias ld='eza -lhD --icons=auto'
 alias lt='eza --icons=auto --tree'
 alias ff='fastfetch'
-alias h='hyprland'
+# alias h='hyprland'
 
 # abbr
 abbr cd 'z'
@@ -47,3 +47,10 @@ end
 # source
 zoxide init fish | source
 fzf --fish | source
+
+# Start X at login
+if status is-login
+    if test -z "$DISPLAY" -a "$XDG_VTNR" = 1
+        exec startx -- -keeptty
+    end
+end
