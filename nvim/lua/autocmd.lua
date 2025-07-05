@@ -9,7 +9,7 @@ vim.api.nvim_create_autocmd("filetype", {
     callback = function(args)
         local bufname = vim.api.nvim_buf_get_name(args.buf)
         local filetype = vim.bo[args.buf].filetype
-        if bufname == "" or vim.fn.isdirectory(bufname) == 1 or vim.tbl_contains({ "help", "oil", "harpoon" }, filetype) then return end
+        if bufname == "" or vim.fn.isdirectory(bufname) == 1 or vim.tbl_contains({ "help", "oil", "harpoon", "toggleterm" }, filetype) then return end
         harpoon:list():add()
     end
 })

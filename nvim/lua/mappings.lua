@@ -39,16 +39,16 @@ map("n", "n", "nzzzv")
 map("n", "N", "Nzzzv")
 map("v", "J", ":m '>+1<CR>gv=gv", { desc = "Move Line Up" })
 map("v", "K", ":m '<-2<CR>gv=gv", { desc = "Move Line Down" })
-map({ "n", "v" }, "<C-a>", "ggVG", { desc = "Select All" })
+map({ "n", "v" }, "<leader>sa", "ggVG", { desc = "Select All" })
 
 -- Disable diagnostic
+map("n", "<leader>ud",
+  ":lua vim.diagnostic.enable(not vim.diagnostic.is_enabled())<CR>",
+  { desc = "Toggle Diagnostic", silent = true })
 map("n", "]]", "<cmd>:lua vim.diagnostic.goto_next()<CR>",
   { desc = "Next Diagnostic" })
 map("n", "[[", "<cmd>:lua vim.diagnostic.goto_prev()<CR>",
   { desc = "Previous Diagnostic" })
-map("n", "<leader>ud",
-  ":lua vim.diagnostic.enable(not vim.diagnostic.is_enabled())<CR>",
-  { desc = "Toggle Diagnostic", silent = true })
 
 -- Comment
 map("n", "<leader>/", "gcc", { desc = "toggle comment", remap = true })

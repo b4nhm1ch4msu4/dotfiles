@@ -155,17 +155,5 @@ return {
 
         require('mason')
         require('mason-lspconfig').setup {automatic_installation = false}
-        require("mason-lspconfig").setup_handlers {
-            function(server_name) -- default handler (optional)
-                local capabilities = require('blink.cmp').get_lsp_capabilities()
-                require("lspconfig")[server_name].setup {
-                    capabilities = capabilities
-                }
-            end
-            -- Example for overwrite setup for specific server
-            -- ["rust_analyzer"] = function ()
-            --     require("rust-tools").setup {}
-            -- end
-        }
     end
 }
