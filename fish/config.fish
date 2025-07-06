@@ -19,9 +19,9 @@ abbr sp 'sudo pacman'
 abbr mkdir 'mkdir -p'
 
 ## bat-extras
-abbr cat 'bat'
+# abbr cat 'bat'
 abbr man 'batman'
-abbr grep 'batgrep'
+# abbr grep 'batgrep'
 
 ## git
 abbr gs 'git status'
