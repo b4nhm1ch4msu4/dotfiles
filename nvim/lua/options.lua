@@ -5,7 +5,7 @@ vim.opt.numberwidth = 2
 -- opt.ruler = false
 
 -- Enable mouse mode
-vim.opt.mouse = 'a'
+vim.opt.mouse = "a"
 
 -- Don't show the mode, since it's already in the status line
 vim.opt.showmode = false
@@ -13,7 +13,9 @@ vim.opt.laststatus = 3
 
 -- Sync clipboard between OS and Neovim.
 --  Schedule the setting after `UiEnter` because it can increase startup-time.
-vim.schedule(function() vim.opt.clipboard = 'unnamedplus' end)
+vim.schedule(function()
+	vim.opt.clipboard = "unnamedplus"
+end)
 
 -- Enable break indent
 vim.opt.breakindent = true
@@ -33,7 +35,7 @@ vim.opt.ignorecase = true
 vim.opt.smartcase = true
 
 -- Keep signcolumn on by default
-vim.opt.signcolumn = 'yes'
+vim.opt.signcolumn = "yes"
 
 -- Decrease update time
 vim.opt.updatetime = 250
@@ -46,16 +48,16 @@ vim.opt.splitright = true
 vim.opt.splitbelow = true
 
 -- remove ~ to indicate lines beyond the end of the file
-vim.opt.fillchars = {eob = " "}
+vim.opt.fillchars = { eob = " " }
 
 -- Sets how neovim will display certain whitespace characters in the editor.
 --  See `:help 'list'`
 --  and `:help 'listchars'`
 vim.opt.list = true
-vim.opt.listchars = {tab = '» ', trail = '·', nbsp = '␣'}
+vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
 
 -- Preview substitutions live, as you type!
-vim.opt.inccommand = 'split'
+vim.opt.inccommand = "split"
 
 -- Show which line your cursor is on
 vim.opt.cursorline = true
@@ -82,8 +84,7 @@ vim.g.loaded_netrw = 1
 vim.g.loaded_netrwPlugin = 1
 
 -- add binaries installed by mason.nvim to path
-local is_windows = vim.fn.has "win32" ~= 0
+local is_windows = vim.fn.has("win32") ~= 0
 local sep = is_windows and "\\" or "/"
 local delim = is_windows and ";" or ":"
-vim.env.PATH = table.concat({vim.fn.stdpath "data", "mason", "bin"}, sep) ..
-                   delim .. vim.env.PATH
+vim.env.PATH = table.concat({ vim.fn.stdpath("data"), "mason", "bin" }, sep) .. delim .. vim.env.PATH
