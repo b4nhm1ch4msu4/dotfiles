@@ -6,7 +6,7 @@ static const unsigned int borderpx  = 5;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const int showbar            = 1;        /* 0 means no bar */
 static const int topbar             = 1;        /* 0 means bottom bar */
-static const int user_bh            = 10;        /* 0 means that dwm will calculate bar height, >= 1 means dwm will user_bh as bar height */
+static const int user_bh            = 32;        /* 0 means that dwm will calculate bar height, >= 1 means dwm will user_bh as bar height */
 static const char *fonts[]          = { "Space Mono:size=14" };
 static const char dmenufont[]       = "monospace:size=10";
 static const char col_gray1[]       = "#222222";
@@ -84,8 +84,8 @@ static const Key keys[] = {
 	// { MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
 	// { MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
-	// { MODKEY,                       XK_comma,  focusmon,       {.i = -1 } },
-	// { MODKEY,                       XK_period, focusmon,       {.i = +1 } },
+	{ MODKEY,                       XK_comma,  focusmon,       {.i = -1 } },
+	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
 	// { MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	// { MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
 	{ MODKEY,                       XK_f,      togglefullscr,  {0} },

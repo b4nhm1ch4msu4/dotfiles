@@ -1,2 +1,2 @@
 #!/usr/bin/env bash
-betterlockscreen -l
+betterlockscreen -l dim
