@@ -5,7 +5,7 @@ vim.opt.numberwidth = 2
 -- opt.ruler = false
 
 -- Enable mouse mode
-vim.opt.mouse = "a"
+vim.opt.mouse = ""
 
 -- Don't show the mode, since it's already in the status line
 vim.opt.showmode = false
