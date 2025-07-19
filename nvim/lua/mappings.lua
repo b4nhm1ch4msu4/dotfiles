@@ -1,9 +1,9 @@
 local map = vim.keymap.set
 
-map("n", ";", ":", { desc = "colon" })
+map("n", ";", ":", { desc = "semicolon" })
 
 -- Add ; at the end of line
-map({"n", "i"}, "<leader>;","<Esc>A;<Esc>",{desc = "append ;", noremap = true, silent = true})
+-- map("n", "<leader>;","A;<Esc>",{desc = "append ;", noremap = true, silent = true})
 
 -- Clear highlights
 map("n", "<Esc>", "<cmd>noh<CR>", { desc = "general clear highlights" })
