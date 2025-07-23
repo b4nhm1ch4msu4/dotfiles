@@ -76,19 +76,19 @@ map("n", "<leader>fm", function()
 end, { desc = "conform format file" })
 
 -- Luasnip
-local ls = require("luasnip")
+-- local ls = require("luasnip")
 
 map({ "i" }, "<C-K>", function()
-	ls.expand()
+	require("luasnip").expand()
 end, { silent = true, desc = "Luasnip expand" })
 map({ "i", "s" }, "<C-L>", function()
-	ls.jump(1)
+	require("luasnip").jump(1)
 end, { silent = true, desc = "Luasnip jump forward" })
 map({ "i", "s" }, "<C-H>", function()
-	ls.jump(-1)
+	require("luasnip").jump(-1)
 end, { silent = true, desc = "Luasnip jump backward" })
 map({ "i", "s" }, "<C-E>", function()
-	if ls.choice_active() then
-		ls.change_choice(1)
+	if require("luasnip").choice_active() then
+		require("luasnip").change_choice(1)
 	end
 end, { silent = true })
