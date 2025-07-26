@@ -1,0 +1,19 @@
+font-family = "SpaceMono Nerd Font Mono"
+font-size = 16
+theme = "citruszest"
+window-decoration = none
+
+# keybinds
+keybind = ctrl+n=new_split:auto
+keybind = ctrl+t=new_tab
+keybind = ctrl+w=close_window
+keybind = ctrl+h=goto_split:left
+keybind = ctrl+j=goto_split:down
+keybind = ctrl+k=goto_split:up
+keybind = ctrl+l=goto_split:right
+keybind = ctrl+shift+left=resize_split:left,10
+keybind = ctrl+shift+right=resize_split:right,10
+keybind = ctrl+shift+up=resize_split:up,10
+keybind = ctrl+shift+down=resize_split:down,10
+keybind = ctrl+f=toggle_split_zoom
+#keybind = cmd+q=toggle_quick_terminal
