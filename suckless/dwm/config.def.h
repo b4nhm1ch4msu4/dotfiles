@@ -21,7 +21,7 @@ static const char *colors[][3]      = {
 };
 
 /* tagging */
-static const char *tags[] = { "", "", "", "", "", "", "", "󰨇", "" };
+static const char *tags[] = { "", "", "", "", "", "", "", "󰨇", "","󰷉" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -75,14 +75,14 @@ static const Key keys[] = {
 	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
 	// { MODKEY,                       XK_Return, zoom,           {0} },
-	// { MODKEY,                       XK_Tab,    view,           {0} },
+	{ MODKEY,                       XK_Tab,    view,           {0} },
 	{ MODKEY,                       XK_q,      killclient,     {0} },
 	// { MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
 	// { MODKEY,                       XK_f,      setlayout,      {.v = &layouts[1]} },
 	// { MODKEY,                       XK_m,      setlayout,      {.v = &layouts[2]} },
 	// { MODKEY,                       XK_space,  setlayout,      {0} },
 	// { MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
-	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
+	// { MODKEY,                       XK_0,      view,           {.ui = ~0 } },
 	// { MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
 	{ MODKEY,                       XK_comma,  focusmon,       {.i = -1 } },
 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
@@ -108,6 +108,9 @@ static const Key keys[] = {
 	TAGKEYS(                        XK_7,                      6)
 	TAGKEYS(                        XK_8,                      7)
 	TAGKEYS(                        XK_9,                      8)
+	TAGKEYS(                        XK_0,                      9)
+  TAGKEYS(                        XK_n,                      5)   // note tag
+  TAGKEYS(                        XK_a,                      6)   // AI chat tag
 };
 
 /* button definitions */
