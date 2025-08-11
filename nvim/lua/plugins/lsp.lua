@@ -1,6 +1,7 @@
 return {
 	"neovim/nvim-lspconfig",
 	event = { "BufReadPre", "BufNewFile" },
+	-- cmd = {"LspStart", "LspRestart"},
 	dependencies = {
 		{
 			"folke/lazydev.nvim",

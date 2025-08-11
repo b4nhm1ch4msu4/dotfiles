@@ -9,10 +9,10 @@ map("n", ";", ":", { desc = "semicolon" })
 map("n", "<Esc>", "<cmd>noh<CR>", { desc = "general clear highlights" })
 
 -- Switch windows
-map("n", "<C-h>", "<C-w>h", { desc = "switch window left" })
-map("n", "<C-l>", "<C-w>l", { desc = "switch window right" })
-map("n", "<C-j>", "<C-w>j", { desc = "switch window down" })
-map("n", "<C-k>", "<C-w>k", { desc = "switch window up" })
+-- map("n", "<C-h>", "<C-w>h", { desc = "switch window left" })
+-- map("n", "<C-l>", "<C-w>l", { desc = "switch window right" })
+-- map("n", "<C-j>", "<C-w>j", { desc = "switch window down" })
+-- map("n", "<C-k>", "<C-w>k", { desc = "switch window up" })
 
 -- -- Swich buffer
 -- map("n", "<leader>bn", "<cmd>bn<CR>", { desc = "next buffer" })
@@ -51,8 +51,8 @@ map(
 	":lua vim.diagnostic.enable(not vim.diagnostic.is_enabled())<CR>",
 	{ desc = "Toggle Diagnostic", silent = true }
 )
-map("n", "]]", "<cmd>:lua vim.diagnostic.goto_next()<CR>", { desc = "Next Diagnostic" })
-map("n", "[[", "<cmd>:lua vim.diagnostic.goto_prev()<CR>", { desc = "Previous Diagnostic" })
+-- map("n", "]]", "<cmd>:lua vim.diagnostic.goto_next()<CR>", { desc = "Next Diagnostic" })
+-- map("n", "[[", "<cmd>:lua vim.diagnostic.goto_prev()<CR>", { desc = "Previous Diagnostic" })
 
 -- Comment
 map("n", "<leader>/", "gcc", { desc = "toggle comment", remap = true })
@@ -63,32 +63,32 @@ map("v", "<leader>/", "gc", { desc = "toggle comment", remap = true })
 -- map("n", "<leader>e", "<cmd>NvimTreeFocus<CR>", { desc = "nvimtree focus window" })
 
 -- Oil file explorer
-map("n", "<leader>e", function()
-	require("oil").toggle_float()
-end, { desc = "Oil toggle window" })
+-- map("n", "<leader>e", function()
+-- 	require("oil").toggle_float()
+-- end, { desc = "Oil toggle window" })
 
 -- Format file
 -- map("n", "<leader>f", "<cmd>lua vim.lsp.buf.format()<CR>", { desc = "default format file" })
 
 -- Conform formater
-map("n", "<leader>fm", function()
-	require("conform").format({ lsp_fallback = true })
-end, { desc = "conform format file" })
+-- map("n", "<leader>fm", function()
+-- 	require("conform").format({ lsp_fallback = true })
+-- end, { desc = "conform format file" })
 
 -- Luasnip
 -- local ls = require("luasnip")
 
-map({ "i" }, "<C-K>", function()
-	require("luasnip").expand()
-end, { silent = true, desc = "Luasnip expand" })
-map({ "i", "s" }, "<C-L>", function()
-	require("luasnip").jump(1)
-end, { silent = true, desc = "Luasnip jump forward" })
-map({ "i", "s" }, "<C-H>", function()
-	require("luasnip").jump(-1)
-end, { silent = true, desc = "Luasnip jump backward" })
-map({ "i", "s" }, "<C-E>", function()
-	if require("luasnip").choice_active() then
-		require("luasnip").change_choice(1)
-	end
-end, { silent = true })
+-- map({ "i" }, "<C-K>", function()
+-- 	require("luasnip").expand()
+-- end, { silent = true, desc = "Luasnip expand" })
+-- map({ "i", "s" }, "<C-L>", function()
+-- 	require("luasnip").jump(1)
+-- end, { silent = true, desc = "Luasnip jump forward" })
+-- map({ "i", "s" }, "<C-H>", function()
+-- 	require("luasnip").jump(-1)
+-- end, { silent = true, desc = "Luasnip jump backward" })
+-- map({ "i", "s" }, "<C-E>", function()
+-- 	if require("luasnip").choice_active() then
+-- 		require("luasnip").change_choice(1)
+-- 	end
+-- end, { silent = true })

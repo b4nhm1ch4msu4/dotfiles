@@ -27,6 +27,9 @@ vim.o.smartindent = true
 vim.o.tabstop = 2
 vim.o.softtabstop = 2
 
+-- Float window border
+vim.o.winborder = "bold"
+
 -- Save undo history
 vim.opt.undofile = true
 
@@ -53,8 +56,8 @@ vim.opt.fillchars = { eob = " " }
 -- Sets how neovim will display certain whitespace characters in the editor.
 --  See `:help 'list'`
 --  and `:help 'listchars'`
-vim.opt.list = true
-vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
+-- vim.opt.list = true
+-- vim.opt.listchars = { tab = "» ", trail = "·", nbsp = "␣" }
 
 -- Preview substitutions live, as you type!
 vim.opt.inccommand = "split"
