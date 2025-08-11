@@ -1,6 +1,7 @@
 require "nvchad.options"
-
 -- add yours here!
+vim.opt.whichwrap = "b,s"
+vim.o.relativenumber = true
 
--- local o = vim.o
--- o.cursorlineopt ='both' -- to enable cursorline!
+-- add border on float window of lsp signature
+vim.o.winborder = "bold"
