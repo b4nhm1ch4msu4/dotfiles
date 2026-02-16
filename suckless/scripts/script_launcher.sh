@@ -4,7 +4,7 @@
 scr_folder="$HOME/dotfiles/suckless/scripts"
 
 # Select script file using rofi
-file_name=$(ls "$scr_folder" | rofi -dmenu)
+file_name=$(ls "$scr_folder" | rofi -dmenu -theme "$HOME/.config/rofi/launchers/type-1/style-11.rasi")
 
 # Exit if no file was selected
 [ -z "$file_name" ] && exit 1
@@ -14,4 +14,3 @@ args=$(rofi -dmenu -p "Arguments (optional)")
 
 # Execute the selected script with given arguments
 exec "$scr_folder/$file_name" "$args"
-
