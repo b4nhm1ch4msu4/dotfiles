@@ -10,7 +10,7 @@ file_name=$(ls "$scr_folder" | rofi -dmenu -theme "$HOME/.config/rofi/launchers/
 [ -z "$file_name" ] && exit 1
 
 # Ask for arguments (optional)
-args=$(rofi -dmenu -p "Arguments (optional)")
+args=$(rofi -dmenu -theme "$HOME/.config/rofi/launchers/type-1/style-11.rasi" -p "Arguments (optional)")
 
 # Execute the selected script with given arguments
 exec "$scr_folder/$file_name" "$args"
