@@ -14,13 +14,13 @@ alias ff='fastfetch'
 # alias h='hyprland'
 
 # abbr
-abbr cd 'z'
+abbr cd z
 abbr sp 'sudo pacman'
 abbr mkdir 'mkdir -p'
 
 ## bat-extras
 # abbr cat 'bat'
-abbr man 'batman'
+abbr man batman
 # abbr grep 'batgrep'
 
 ## git
@@ -28,21 +28,21 @@ abbr gs 'git status'
 abbr ga 'git add'
 abbr gpl 'git pull'
 abbr gps 'git push'
-abbr lg 'lazygit'
+abbr lg lazygit
+abbr wifi 'nmcli device wifi'
 
 function y
-  set tmp (mktemp -t "yazi-cwd.XXXXXX")
-  yazi $argv --cwd-file="$tmp"
-  if set cwd (command cat -- "$tmp"); and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
-    builtin cd -- "$cwd"
-  end
-  rm -f -- "$tmp"
+    set tmp (mktemp -t "yazi-cwd.XXXXXX")
+    yazi $argv --cwd-file="$tmp"
+    if set cwd (command cat -- "$tmp"); and [ -n "$cwd" ]; and [ "$cwd" != "$PWD" ]
+        builtin cd -- "$cwd"
+    end
+    rm -f -- "$tmp"
 end
 
 #function cd_fzf
 #  z "$(dirname "$(fd $argv -t f | fzf --preview 'bat --color=always {}')")"
 #end
-
 
 # source
 zoxide init fish | source
