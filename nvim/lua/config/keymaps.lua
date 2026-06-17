@@ -17,3 +17,25 @@ map("n", "N", "Nzzzv")
 map("v", "J", ":m '>+1<CR>gv=gv", { desc = "Move Line Up" })
 map("v", "K", ":m '<-2<CR>gv=gv", { desc = "Move Line Down" })
 map({ "n", "i", "v" }, "<C-c>", "<Esc>", { desc = "Esc" })
+
+-- Copy absolute file path
+map("n", "<leader>yp", function()
+  local path = vim.fn.expand("%:p")
+  vim.fn.setreg("+", path)
+  vim.notify("Copied file path: " .. path)
+end, { desc = "Copy absolute file path" })
+
+-- Copy absolute directory path
+map("n", "<leader>yd", function()
+  local dir = vim.fn.expand("%:p:h")
+  vim.fn.setreg("+", dir)
+  vim.notify("Copied directory path: " .. dir)
+end, { desc = "Copy directory path" })
+
+-- Copy file name (without extension)
+map("n", "<leader>yf", function()
+  local filename = vim.fn.expand("%:t:r")
+  vim.fn.setreg("+", filename)
+  vim.notify("Copied file name: " .. filename)
+end, { desc = "Copy file name" })
+
