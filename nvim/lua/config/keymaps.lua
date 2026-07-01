@@ -8,7 +8,8 @@ map("n", "<tab>", "<cmd>bnext<cr>", { desc = "next buffer" })
 map("n", "<S-tab>", "<cmd>bprevious<cr>", { desc = "previous buffer" })
 
 -- useful edit keymaps
-map("x", "<leader>p", [["_dP]], { desc = "Primeagen Copy" })
+-- map("x", "<leader>p", [["_dP]], { desc = "Primeagen Copy" })
+map("x", "p", [["_dP]], { desc = "Primeagen Copy" })
 map("n", "<C-a>", "ggVG", { desc = "Select all" })
 map("n", "<C-d>", "<C-d>zz", { desc = "Scroll plus zz" })
 map("n", "<C-u>", "<C-u>zz", { desc = "Scroll plus zz" })
