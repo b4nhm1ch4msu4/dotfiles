@@ -6,8 +6,11 @@ return {
       ["C-y"] = { "accept" },
       ["<Tab>"] = {},
       ["<S-Tab>"] = {},
-      -- ['<PageUp>'] = { 'snippet_forward', 'fallback' },
-      -- ['<PageDown>'] = { 'snippet_backward', 'fallback' },
+      ['<C-l>'] = { 'snippet_forward', 'fallback' },
+      ['<C-h>'] = { 'snippet_backward', 'fallback' },
     },
+    -- snippets = {
+    --   preset = "luasnip",
+    -- },
   },
 }

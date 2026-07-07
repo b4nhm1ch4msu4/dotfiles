@@ -40,3 +40,8 @@ map("n", "<leader>yf", function()
   vim.notify("Copied file name: " .. filename)
 end, { desc = "Copy file name" })
 
+
+map("n", "<leader>r", function ()
+  local path = vim.fn.expand("%:p")
+  Snacks.terminal("robot -A robot.args " .. path, {cwd=""})
+end)
