@@ -1,9 +1,5 @@
+local M = {}
 local map = vim.keymap.set
-
-vim.pack.add({"https://github.com/folke/snacks.nvim"})
-require("snacks").setup({
-  picker = {},
-})
 
 -- Top Pickers & Explorer
 map("n", "<leader><space>", function() Snacks.picker.smart() end, {desc = "Smart Find Files" })
@@ -80,3 +76,5 @@ vim.api.nvim_create_autocmd('LspAttach', {
     map("n", "<leader>sS", function() Snacks.picker.lsp_workspace_symbols() end, {buffer = buf, desc = "LSP Workspace Symbols" })
   end,
 })
+
+return M
