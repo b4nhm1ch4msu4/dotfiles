@@ -55,7 +55,7 @@ vim.api.nvim_create_autocmd('LspAttach', {
 
 -- Setup LSP servers
 local servers = {
-  -- clangd = {},
+  clangd = {},
   -- gopls = {},
   -- pyright = {},
   -- rust_analyzer = {},
