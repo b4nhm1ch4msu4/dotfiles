@@ -56,7 +56,7 @@ return {
 			default = { "lsp", "path", "snippets" },
 		},
 
-		-- snippets = { preset = "luasnip" },
+		snippets = { preset = "luasnip" },
 
 		-- Blink.cmp includes an optional, recommended rust fuzzy matcher,
 		-- which automatically downloads a prebuilt binary when enabled.

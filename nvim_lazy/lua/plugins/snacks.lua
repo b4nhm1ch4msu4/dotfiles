@@ -2,6 +2,7 @@ local picker = require("config.snacks.picker")
 local dashboard = require("config.snacks.dashboard")
 local indent = require("config.snacks.indent")
 local notifier = require("config.snacks.notifier")
+local scratch = require("config.snacks.scratch")
 
 return {
 	"folke/snacks.nvim",
@@ -12,5 +13,6 @@ return {
 		dashboard = dashboard,
 		indent = indent,
 		notifier = notifier,
+		scratch = scratch,
 	},
 }
