@@ -18,8 +18,35 @@ return {
 			lsp_format = "fallback", -- Use external formatters if configured below, otherwise use LSP formatting. Set to `false` to disable LSP formatting entirely.
 		},
 		-- You can also specify external formatters in here.
+		formatters = {
+			robocop = {
+				command = "robocop",
+				-- A list of strings, or a function that returns a list of strings
+				-- Return a single string instead of a list to run the command in a shell
+				args = {
+					"format",
+					"--configure",
+					"NormalizeTags.enabled=False",
+					"--configure",
+					"MergeAndOrderSections.create_comment_section=False",
+					"$FILENAME",
+				},
+				stdin = false,
+				range_args = function(self, ctx)
+					return {
+						"format",
+						"--start-line",
+						ctx.range.start[1],
+						"--end-line",
+						ctx.range["end"][1],
+						"$FILENAME",
+					}
+				end,
+			},
+		},
 		formatters_by_ft = {
 			lua = { "stylua" },
+			robot = { "robocop" },
 			-- rust = { 'rustfmt' },
 			-- Conform can also run multiple formatters sequentially
 			-- python = { "isort", "black" },
