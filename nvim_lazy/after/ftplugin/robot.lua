@@ -83,3 +83,10 @@ require("which-key").add({
 -- require("luasnip.loaders.from_lua").lazy_load({
 --   path = vim.fn.stdpath("config") .. "\\snippets",
 -- })
+
+-- Options
+vim.bo.commentstring = '# %s'
+-- Indenting
+vim.bo.shiftwidth = 4
+vim.bo.tabstop = 4
+vim.bo.softtabstop = 4

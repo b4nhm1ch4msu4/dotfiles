@@ -1,5 +1,6 @@
 return {
 	"stevearc/conform.nvim",
+	event = { "BufReadPre", "BufNewFile" },
 	opts = {
 		notify_on_error = false,
 		format_on_save = function(bufnr)
@@ -55,13 +56,18 @@ return {
 			-- javascript = { "prettierd", "prettier", stop_after_first = true },
 		},
 	},
-	keys = {
-		{
-			"<leader>cf",
-			function()
-				require("conform").format({ async = true })
-			end,
-			{ desc = "Format file", mode = { "n", "v" } },
-		},
-	},
+	config = function()
+		vim.keymap.set({ "n", "v" }, "<leader>cf", function()
+			require("conform").format({ async = true })
+		end, { desc = "Format file" })
+	end,
+	-- keys = {
+	-- 	{
+	-- 		"<leader>cf",
+	-- 		function()
+	-- 			require("conform").format({ async = true })
+	-- 		end,
+	-- 		{ desc = "Format file", mode = { "n", "v" } },
+	-- 	},
+	-- },
 }

@@ -3,6 +3,7 @@ local dashboard = require("config.snacks.dashboard")
 local indent = require("config.snacks.indent")
 local notifier = require("config.snacks.notifier")
 local scratch = require("config.snacks.scratch")
+local terminal = require("config.snacks.terminal")
 
 return {
 	"folke/snacks.nvim",
@@ -14,5 +15,6 @@ return {
 		indent = indent,
 		notifier = notifier,
 		scratch = scratch,
+		terminal = terminal,
 	},
 }
