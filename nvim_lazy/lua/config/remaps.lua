@@ -9,6 +9,9 @@ map("n", "<S-tab>", "<cmd>bprevious<cr>", { desc = "previous buffer" })
 map("n", "<S-h>", "<cmd>bprevious<cr>", { desc = "previous buffer" })
 -- map("t", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
 
+map({ "n", "x" }, "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true, desc = "Move down by visual line" })
+
+map({ "n", "x" }, "k", "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true, desc = "Move up by visual line" })
 -- useful edit keymaps
 -- map("x", "<leader>p", [["_dP]], { desc = "Primeagen Copy" })
 map("x", "p", [["_dP]], { desc = "Primeagen Copy" })
