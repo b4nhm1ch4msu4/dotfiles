@@ -1,8 +1,8 @@
 return {
 	"stevearc/conform.nvim",
-	event = { "BufReadPre", "BufNewFile" },
+	-- event = { "BufReadPre", "BufNewFile" },
 	opts = {
-		notify_on_error = false,
+		notify_on_error = true,
 		format_on_save = function(bufnr)
 			-- You can specify filetypes to autoformat on save here:
 			local enabled_filetypes = {
@@ -48,6 +48,8 @@ return {
 		formatters_by_ft = {
 			lua = { "stylua" },
 			robot = { "robocop" },
+			c = { "clang-format" },
+			cpp = { "clang-format" },
 			-- rust = { 'rustfmt' },
 			-- Conform can also run multiple formatters sequentially
 			-- python = { "isort", "black" },
@@ -56,18 +58,13 @@ return {
 			-- javascript = { "prettierd", "prettier", stop_after_first = true },
 		},
 	},
-	config = function()
-		vim.keymap.set({ "n", "v" }, "<leader>cf", function()
-			require("conform").format({ async = true })
-		end, { desc = "Format file" })
-	end,
-	-- keys = {
-	-- 	{
-	-- 		"<leader>cf",
-	-- 		function()
-	-- 			require("conform").format({ async = true })
-	-- 		end,
-	-- 		{ desc = "Format file", mode = { "n", "v" } },
-	-- 	},
-	-- },
+	keys = {
+		{
+			"<leader>cf",
+			function()
+				require("conform").format({ async = true })
+			end,
+			{ desc = "[C]ode [F]ormat file", mode = { "n", "v" } },
+		},
+	},
 }
