@@ -84,6 +84,5 @@ vim.env.PATH = table.concat({ vim.fn.stdpath("data"), "mason", "bin" }, sep) .. 
 
 -- change shell to pwsh on windows
 if is_windows and vim.fn.executable("pwsh") == 1 then
-	opt.shell = "pwsh"
-	opt.shellcmdflag = "-NoLogo"
+	opt.shell = "pwsh -NoLogo"
 end
