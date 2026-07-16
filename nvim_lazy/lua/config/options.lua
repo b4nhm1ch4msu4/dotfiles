@@ -76,7 +76,6 @@ vim.diagnostic.config({
 	},
 })
 
-
 -- add binaries installed by mason.nvim to path
 local is_windows = vim.fn.has("win32") ~= 0
 local sep = is_windows and "\\" or "/"
@@ -84,4 +83,7 @@ local delim = is_windows and ";" or ":"
 vim.env.PATH = table.concat({ vim.fn.stdpath("data"), "mason", "bin" }, sep) .. delim .. vim.env.PATH
 
 -- change shell to pwsh on windows
-if is_windows and vim.fn.executable("pwsh") == 1 then o.shell = "pwsh" end
+if is_windows and vim.fn.executable("pwsh") == 1 then
+	opt.shell = "pwsh"
+	opt.shellcmdflag = "-NoLogo"
+end
