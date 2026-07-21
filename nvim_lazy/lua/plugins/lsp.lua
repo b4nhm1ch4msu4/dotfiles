@@ -10,7 +10,7 @@ return {
 		require("mason").setup()
 		local servers = {
 			clangd = {},
-			-- pyright = {},
+			pyright = {},
 			stylua = {}, -- Used to format Lua code
 			lua_ls = {
 				on_init = function(client)
