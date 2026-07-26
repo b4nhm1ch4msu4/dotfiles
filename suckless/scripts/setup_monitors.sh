@@ -18,7 +18,7 @@ elif [ "$1" = "left" ]; then
 elif [ "$1" = "below" ]; then
   xrandr --output "$internal_mon" --mode "$res" --auto \
     --output "$external_mon" --mode "$res" --auto --below "$internal_mon" --primary
-elif [ "$1" = "above"]
+elif [ "$1" = "above" ]; then
   xrandr --output "$internal_mon" --mode "$res" --auto \
     --output "$external_mon" --mode "$res" --auto --above "$internal_mon" --primary
 else

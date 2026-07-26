@@ -7,6 +7,7 @@ case $1 in
   thorium-browser --app="https://www.youtube.com/"
   ;;
 *)
-  notify-send -u warning "Unknown option"
+  # notify-send -u warning "Unknown option"
+  thorium-browser --app="$1"
   ;;
 esac
