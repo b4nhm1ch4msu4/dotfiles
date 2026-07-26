@@ -23,6 +23,6 @@ return {
   ),
   s(
     'v',
-    fmta("${<>}\t\tSet Variable\t\t<>",{i(1),i(2)})
+    fmta("${<>}\t\t",{i(1)})
   )
 }

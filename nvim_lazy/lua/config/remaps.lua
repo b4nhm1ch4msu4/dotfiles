@@ -3,18 +3,18 @@ map("n", "s", "<Nop>", { desc = "remove 's' keymap" })
 map("n", "<Esc>", "<cmd>nohlsearch<CR>")
 map("i", "jk", "<Esc>", { desc = "Esc" })
 map("n", ";", ":", { desc = "Command line" })
-map("n", "<tab>", "<cmd>bnext<cr>", { desc = "next buffer" })
+-- map("n", "<tab>", "<cmd>bnext<cr>", { desc = "next buffer" })
 map("n", "<S-l>", "<cmd>bnext<cr>", { desc = "next buffer" })
-map("n", "<S-tab>", "<cmd>bprevious<cr>", { desc = "previous buffer" })
+-- map("n", "<S-tab>", "<cmd>bprevious<cr>", { desc = "previous buffer" })
 map("n", "<S-h>", "<cmd>bprevious<cr>", { desc = "previous buffer" })
 -- map("t", "<Esc><Esc>", "<C-\\><C-n>", { desc = "Exit terminal mode" })
 
 map({ "n", "x" }, "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true, desc = "Move down by visual line" })
-
 map({ "n", "x" }, "k", "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true, desc = "Move up by visual line" })
+
 -- useful edit keymaps
 -- map("x", "<leader>p", [["_dP]], { desc = "Primeagen Copy" })
-map("x", "p", [["_dP]], { desc = "Primeagen Copy" })
+map("x", "p", [["_dP]], { desc = "Paste without copy" })
 -- map("n", "<C-a>", "ggVG", { desc = "Select all" })
 map("n", "<C-d>", "<C-d>zz", { desc = "Scroll plus zz" })
 map("n", "<C-u>", "<C-u>zz", { desc = "Scroll plus zz" })
@@ -23,6 +23,8 @@ map("n", "N", "Nzzzv")
 map("v", "J", ":m '>+1<CR>gv=gv", { desc = "Move Line Up" })
 map("v", "K", ":m '<-2<CR>gv=gv", { desc = "Move Line Down" })
 map({ "n", "i", "v" }, "<C-c>", "<Esc>", { desc = "Esc" })
+map("v", "<", "<gv")
+map("v", ">", ">gv")
 
 -- Copy absolute file path
 map("n", "<leader>yp", function()
