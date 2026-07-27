@@ -3,13 +3,6 @@ return {
 	version = "*",
 	event = "VeryLazy",
 	-- event = "BufAdd",
-	-- cmd = {
-	-- 	"Bnext",
-	-- 	"Bprevious",
-	-- },
 	dependencies = "nvim-tree/nvim-web-devicons",
-	config = function()
-		vim.opt.termguicolors = true
-		require("bufferline").setup({})
-	end,
+	opts = { options = { always_show_bufferline = false } },
 }

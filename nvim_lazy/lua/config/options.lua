@@ -44,6 +44,7 @@ o.undofile = true
 o.updatetime = 250
 o.scrolloff = 10
 
+opt.termguicolors = true
 -- go to previous/next line with h,l,left arrow and right arrow
 -- when cursor reaches end/beginning of line
 -- opt.whichwrap:append "<>[]hl"
