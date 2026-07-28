@@ -10,7 +10,7 @@ local terminal_opts = {
 
 local function robot_run_current_file()
   local path = vim.fn.expand("%:p")
-  local cmd = "robot -A robot.args " .. path
+  local cmd = "robot -A C:/workspace/robot.args " .. path
   vim.fn.setreg("+", cmd)
   vim.notify("Copied cmd: " .. cmd)
   -- Snacks.terminal("robot -A robot.args " .. path, terminal_opts)
@@ -38,7 +38,7 @@ local function robot_run_flash()
     end
   end
 
-  local cmd = string.format('pwsh -Command "robot -A robot.args %s %q"', table.concat(args, " "), path)
+  local cmd = string.format('pwsh -Command "robot -A C:/workspace/robot.args %s %q"', table.concat(args, " "), path)
   vim.fn.setreg("+", cmd)
   vim.notify("Copied cmd: " .. cmd)
 
