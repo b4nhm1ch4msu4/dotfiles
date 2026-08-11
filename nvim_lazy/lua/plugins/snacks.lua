@@ -7,8 +7,8 @@ local terminal = require("config.snacks.terminal")
 
 return {
 	"folke/snacks.nvim",
-	---@type snacks.Config
 	priority = 1000, -- make sure to load this before all the other start plugins
+	---@type snacks.Config
 	opts = {
 		picker = picker,
 		dashboard = dashboard,
