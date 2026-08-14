@@ -48,7 +48,7 @@ map("n", "<leader>yf", function()
 end, { desc = "Copy file name" })
 
 -- move over a closing element in insert mode
-map("i", "<C-.>", function()
+map("i", "<C-j>", function()
   local closers = { ")", "]", "}", ">", "'", '"', "`", "," }
   local line = vim.api.nvim_get_current_line()
   local row, col = unpack(vim.api.nvim_win_get_cursor(0))
@@ -70,3 +70,8 @@ map("i", "<C-.>", function()
 end, { desc = "move over a closing element" })
 
 map("n", "<leader>q", vim.diagnostic.setloclist, { desc = "Open diagnostic [Q]uickfix list" })
+map('n', '<leader>td', function()
+  local enabled = vim.diagnostic.is_enabled()
+  vim.diagnostic.enable(not enabled)
+end, { desc = 'Toggle diagnostics' })
+
