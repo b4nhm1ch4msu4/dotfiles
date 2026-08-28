@@ -11,5 +11,8 @@ return {
 				},
 			},
 		},
+    options = {
+      theme = 'citruszest'
+    }
 	},
 }
