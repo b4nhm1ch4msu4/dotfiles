@@ -1,0 +1,18 @@
+[notebook]
+dir = "~/documents/notasys"
+
+[note]
+filename = "{{slug title}}"
+template = "default.md"
+
+[tool]
+editor = "nvim"
+
+[alias]
+n = 'zk new --template="default.md"'
+d = 'zk new --template="daily.md"'
+
+
+# journal group
+[group.journal]
+paths = ["daybyday"]
