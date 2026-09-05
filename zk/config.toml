@@ -1,5 +1,5 @@
 [notebook]
-dir = "~/documents/notasys"
+dir = "~/Documents/notasys"
 
 [note]
 filename = "{{slug title}}"
@@ -11,6 +11,10 @@ editor = "nvim"
 [alias]
 n = 'zk new --template="default.md"'
 d = 'zk new --template="daily.md"'
+t = 'zk list 1_temp'
+
+[filter]
+temp = "--sort created 1_temp"
 
 
 # journal group

@@ -9,7 +9,7 @@ return {
 	config = function()
 		require("mason").setup()
 		local servers = {
-      gopls = {},
+      -- gopls = {},
 			clangd = {},
 			pyright = {},
 			stylua = {}, -- Used to format Lua code
@@ -39,6 +39,7 @@ return {
 							library = vim.tbl_extend("force", vim.api.nvim_get_runtime_file("", true), {
 								"${3rd}/luv/library",
 								"${3rd}/busted/library",
+                "/usr/share/hypr/stubs/"
 							}),
 						},
 					})

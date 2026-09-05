@@ -72,3 +72,11 @@ vim.api.nvim_create_autocmd("LspAttach", {
 		end
 	end,
 })
+
+vim.api.nvim_create_autocmd("InsertLeave", {
+  callback = function()
+    if vim.fn.executable("fcitx5-remote") == 1 then
+      vim.fn.system("fcitx5-remote -c")
+    end
+  end,
+})

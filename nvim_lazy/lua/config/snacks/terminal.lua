@@ -6,9 +6,9 @@ vim.keymap.set({ "n", "t" }, "<A-i>", function()
 	Snacks.terminal.toggle(nil, { win = { position = "float", border = "rounded" }, count = 1 })
 end, { desc = "Toggle term" })
 
-vim.keymap.set({ "n", "t" }, "<A-h>", function()
-	Snacks.terminal.toggle(nil, { win = { position = "bottom", border = "rounded" }, count = 2 })
-end, { desc = "Toggle term" })
+-- vim.keymap.set({ "n", "t" }, "<A-h>", function()
+-- 	Snacks.terminal.toggle(nil, { win = { position = "bottom", border = "rounded" }, count = 2 })
+-- end, { desc = "Toggle term" })
 --
 -- vim.keymap.set({ "n", "t" }, "<A-t>", function()
 -- 	Snacks.terminal.toggle(nil, { win = { position = "top", border = "rounded" }, count = 4 })
