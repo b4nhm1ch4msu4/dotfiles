@@ -10,6 +10,7 @@ return {
 		require("mason").setup()
 		local servers = {
       -- gopls = {},
+      marksman = {},
 			clangd = {},
 			pyright = {},
 			stylua = {}, -- Used to format Lua code
