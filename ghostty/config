@@ -1,19 +1,27 @@
-font-family = "SpaceMono Nerd Font Mono"
-font-size = 16
+# UI
+# font-family = "SpaceMono Nerd Font Mono"
+font-family = "SpaceMono Nerd Font Mono Bold"
+font-size = 12
+font-style = "Bold"
+adjust-cell-height = 2
 theme = "Citruszest"
 window-decoration = none
+window-padding-x = 20
 
 # keybinds
-keybind = ctrl+n=new_split:auto
-keybind = ctrl+t=new_tab
-keybind = ctrl+w=close_window
-keybind = ctrl+h=goto_split:left
-keybind = ctrl+j=goto_split:down
-keybind = ctrl+k=goto_split:up
-keybind = ctrl+l=goto_split:right
+keybind = ctrl+shift+n=new_split:auto
+keybind = ctrl+shift+t=new_tab
+keybind = ctrl+shift+w=close_window
+keybind = ctrl+shift+h=goto_split:left
+keybind = ctrl+shift+j=goto_split:down
+keybind = ctrl+shift+k=goto_split:up
+keybind = ctrl+shift+l=goto_split:right
 keybind = ctrl+shift+left=resize_split:left,10
 keybind = ctrl+shift+right=resize_split:right,10
 keybind = ctrl+shift+up=resize_split:up,10
 keybind = ctrl+shift+down=resize_split:down,10
-keybind = ctrl+f=toggle_split_zoom
+keybind = ctrl+shift+f=toggle_split_zoom
 #keybind = cmd+q=toggle_quick_terminal
+
+# options
+# copy-on-select = false
