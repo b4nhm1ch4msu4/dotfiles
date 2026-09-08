@@ -13,8 +13,8 @@ map({ "n", "x" }, "j", "v:count == 0 ? 'gj' : 'j'", { expr = true, silent = true
 map({ "n", "x" }, "k", "v:count == 0 ? 'gk' : 'k'", { expr = true, silent = true, desc = "Move up by visual line" })
 
 -- useful edit keymaps
--- map("x", "<leader>p", [["_dP]], { desc = "Primeagen Copy" })
-map("x", "p", [["_dP]], { desc = "Paste without copy" })
+map("x", "<leader>p", [["_dP]], { desc = "Primeagen Paste" })
+-- map("x", "p", [["_dP]], { desc = "Paste without copy" })
 -- map("n", "<C-a>", "ggVG", { desc = "Select all" })
 map("n", "<C-d>", "<C-d>zz", { desc = "Scroll plus zz" })
 map("n", "<C-u>", "<C-u>zz", { desc = "Scroll plus zz" })
