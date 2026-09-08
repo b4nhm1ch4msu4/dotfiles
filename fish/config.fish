@@ -1,5 +1,6 @@
 set -g fish_greeting
 set -U EDITOR nvim
+set -U ZK_NOTEBOOK_DIR "/home/tienp/Documents/notasys/"
 fish_vi_key_bindings
 
 # alias
@@ -30,6 +31,15 @@ abbr gpl 'git pull'
 abbr gps 'git push'
 abbr lg lazygit
 abbr wifi 'nmcli device wifi'
+
+## zk 
+abbr zc 'cd $ZK_NOTEBOOK_DIR; zk conf'
+# abbr zn 'cd $ZK_NOTEBOOK_DIR; zk new'
+abbr zo 'cd $ZK_NOTEBOOK_DIR; zk open'
+abbr zd 'cd $ZK_NOTEBOOK_DIR; zk daily'
+abbr zl 'cd $ZK_NOTEBOOK_DIR; zk ls'
+abbr zu 'cd $ZK_NOTEBOOK_DIR; zk update'
+abbr zs 'cd $ZK_NOTEBOOK_DIR; zk sync'
 
 function y
     set tmp (mktemp -t "yazi-cwd.XXXXXX")
