@@ -10,7 +10,7 @@ local terminal_opts = {
 
 local function robot_run_current_file()
   local path = vim.fn.expand("%:p")
-  local cmd = "robot -A C:/workspace/robot.args " .. path
+  local cmd = "robot -A C:/workspace/robot.args '" .. path .. "'"
   vim.fn.setreg("+", cmd)
   vim.notify("Copied cmd: " .. cmd)
   -- Snacks.terminal("robot -A robot.args " .. path, terminal_opts)
